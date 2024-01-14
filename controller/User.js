@@ -64,6 +64,8 @@ export const login = async (req, res) => {
       .cookie("token", token, {
         expires: new Date(Date.now() + 90*24*60*60*1000),
         httpOnly: true,
+        sameSite: "None",
+        secure: true,
       })
       .json({
         success: true,
