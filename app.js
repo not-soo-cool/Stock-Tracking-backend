@@ -11,7 +11,7 @@ app.use(cookieParser());
 app.use(
   cors({
     // origin: process.env.WEB_URL,
-    origin: "https://stock-lyart.vercel.app",
+    origin: process.env.WEB_URL,
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
